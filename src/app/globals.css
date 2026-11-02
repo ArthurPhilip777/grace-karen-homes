@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit), "Segoe UI", sans-serif;
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --color-ivory: #f3eee6;
+  --color-paper: #faf7f2;
+  --color-ink: #1c1712;
+  --color-muted: #5c564c;
+  --color-gold: #7a5a32;
+  --color-brass: #e4cba0;
+  --color-forest: #10241c;
+  --color-pine: #1c3a2d;
+  --color-line: #e3d9cc;
+  --color-clay: #8c4030;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #1c3a2d;
+  color: #f6f1e7;
+}
+
+:focus-visible {
+  outline: 2px solid #7a5a32;
+  outline-offset: 3px;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #e7e1d6;
+  font-family: var(--font-sans);
+  z-index: 0;
+}
+
+.leaflet-control-zoom a {
+  border-radius: 0 !important;
+  color: #10241c !important;
+  background: #faf7f2 !important;
+  border-color: #e3d9cc !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+}
+
+.leaflet-bar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+  background: #faf7f2;
+  box-shadow: none;
+  border: 1px solid #e3d9cc;
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: 230px !important;
+}
+
+.leaflet-popup-tip {
+  background: #faf7f2;
+  box-shadow: none;
+}
+
+.leaflet-popup-close-button {
+  color: #1c1712 !important;
+  padding: 8px 8px 0 0 !important;
+}
+
+.gkh-pin {
+  background: transparent;
+  border: none;
+}
+
+.gkh-pin span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #10241c;
+  border: 2px solid #f3eee6;
+  box-shadow: 0 0 0 2px #8d6a3e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
